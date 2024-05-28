@@ -122,7 +122,7 @@
               <h1 class="text-white">Your download should begin automatically</h1>
               <p class="text-white mt-4">
                 If it doesn't start automatically, please click
-                <a href="assets/app/app-debug.apk" class="text-white text-underlined" download>here</a>
+                <a href="./assets/app/app-debug.apk" class="text-white text-underlined" download>here</a>
                 to download manually.
               </p>
             </div>
@@ -154,6 +154,18 @@
 
     <!-- Active js -->
     <script src="assets/js/active.js"></script>
+
+    <script>
+      // JavaScript to trigger the download automatically
+      document.addEventListener("DOMContentLoaded", function() {
+        var link = document.createElement('a');
+        link.href = './assets/app/app-debug.apk';
+        link.download = 'app-debug.apk';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    </script>
   </body>
 
   <!-- Mirrored from theme-land.com/sapp/demo/download.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 May 2024 07:53:32 GMT -->
